@@ -23,7 +23,7 @@ export const Analytics = () =>{
             </div>
 
             <div className="div1">
-                <h2>5+</h2>
+                <h2>10+</h2>
                 <p>Clients</p>
                 
             </div>
@@ -32,4 +32,5 @@ export const Analytics = () =>{
         
         </>
     )
+
 }
