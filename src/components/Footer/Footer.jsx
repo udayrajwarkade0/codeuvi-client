@@ -36,7 +36,7 @@ export const Footer = () => {
               <NavLink to="/about">About</NavLink>
             </li>
             <li>
-              <NavLink to="/service">Services</NavLink>
+              <NavLink to="/service">Projects</NavLink>
             </li>
             <li>
               <NavLink to="/contact">Contact</NavLink>
@@ -93,3 +93,4 @@ export const Footer = () => {
     </footer>
   );
 };
+
