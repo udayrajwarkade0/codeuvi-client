@@ -1,0 +1,537 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Urbanist, system-ui, Avenir, Arial, Helvetica, sans-serif;
+}
+
+:root {
+  --bg-color: #f4f3ff;
+  --btn-color: #646cff;
+  --dark-color: #242424;
+  --helper-color: #99b9ff;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  padding-top: 80px;
+  margin: 0;
+  min-height: 100vh;
+  background-color: var(--bg-color);
+}
+
+a {
+  text-decoration: none;
+  color: var(--btn-color);
+  font-weight: 500;
+}
+
+li {
+  list-style: none;
+}
+
+h1, p, li, label, input, textarea {
+  font-size: 1.8rem;
+  line-height: 1.56;
+  letter-spacing: 0.06rem;
+}
+
+button {
+  cursor: pointer;
+  text-transform: capitalize;
+  transition: all 0.3s ease;
+}
+
+/* Flex / Grid helpers */
+.container {
+  max-width: 140rem;
+  padding: 0 2.4rem;
+  margin: 0 auto;
+}
+
+.grid {
+  display: grid;
+  gap: 6.4rem;
+}
+
+.grid-two-cols {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.grid-four-cols {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+/* Layout helpers */
+.app-layout {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.content {
+  flex: 1;
+}
+
+.div1 {
+  /* background: rgba(196, 177, 177, 0.1); */
+  border-radius: 1rem;
+  padding: 1.6rem;
+  margin: 0.8rem;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+
+
+/* =========================
+   ERROR PAGE STYLES
+   ========================= */
+
+#error-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+  background: #f3f4f6;
+  text-align: center;
+  padding: 2rem;
+}
+
+#error-page .content {
+  max-width: 600px;
+}
+
+#error-page .header {
+  font-size: 10rem;
+  font-weight: bold;
+  color: #646cff;
+  margin-bottom: 1rem;
+}
+
+#error-page h4 {
+  font-size: 2.4rem;
+  color: #1f2937;
+  margin-bottom: 1rem;
+}
+
+#error-page p {
+  font-size: 1.6rem;
+  color: #4b5563;
+  margin-bottom: 2rem;
+}
+
+#error-page .btns {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+#error-page .btns a {
+  text-decoration: none;
+  padding: 1rem 2rem;
+  border-radius: 0.8rem;
+  font-weight: 500;
+  font-size: 1.6rem;
+  transition: 0.3s;
+  background-color: #646cff;
+  color: white;
+}
+
+#error-page .btns a:hover {
+  background-color: #535bf2;
+  transform: translateY(-3px);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  #error-page .header {
+    font-size: 6rem;
+  }
+
+  #error-page h4 {
+    font-size: 2rem;
+  }
+
+  #error-page p {
+    font-size: 1.4rem;
+  }
+}
+
+
+/* =========================
+   Admin Users Section
+   ========================= */
+
+.admin-users-section {
+  padding: 4rem 2rem;
+  background-color: #f9fafb;
+}
+
+.container-admin h1 {
+  font-size: 3rem;
+  margin-bottom: 2rem;
+  color: #1f2937;
+  text-align: center;
+}
+
+.admin-users table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #fff;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  border-radius: 0.8rem;
+  overflow: hidden;
+}
+
+.admin-users th,
+.admin-users td {
+  padding: 1.2rem 1rem;
+  text-align: left;
+  font-size: 1.6rem;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.admin-users th {
+  background-color: #646cff;
+  color: #fff;
+  font-weight: 600;
+}
+
+.admin-users tr:hover {
+  background-color: #f1f5ff;
+}
+
+.btn-action {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 0.5rem;
+  font-size: 1.4rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-delete {
+  background-color: #f87171;
+  color: #fff;
+}
+
+.btn-delete:hover {
+  background-color: #ef4444;
+}
+
+.admin-users a {
+  color: #10b981;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.admin-users a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .admin-users table,
+  .admin-users thead,
+  .admin-users tbody,
+  .admin-users th,
+  .admin-users td,
+  .admin-users tr {
+    display: block;
+    width: 100%;
+  }
+
+  .admin-users tr {
+    margin-bottom: 1.5rem;
+  }
+
+  .admin-users td {
+    text-align: right;
+    padding-left: 50%;
+    position: relative;
+  }
+
+  .admin-users td::before {
+    content: attr(data-label);
+    position: absolute;
+    left: 1rem;
+    width: 45%;
+    text-align: left;
+    font-weight: 600;
+    color: #1f2937;
+  }
+
+  .admin-users th {
+    display: none;
+  }
+}
+
+
+
+/* =========================
+  ADMIIN - UPDATE JSX 
+   ========================= */
+
+   .update-user-section {
+  padding: 4rem 2rem;
+  background-color: #f9f9f9;
+}
+
+.container-edit h1 {
+  font-size: 2.8rem;
+  margin-bottom: 2rem;
+  color: #1f2937;
+  text-align: center;
+}
+
+.section-form {
+  background-color: white;
+  padding: 3rem 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.section-form form div {
+  margin-bottom: 1.8rem;
+}
+
+.section-form label {
+  display: block;
+  font-size: 1.6rem;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+
+.section-form input {
+  width: 100%;
+  padding: 1rem 1.2rem;
+  font-size: 1.6rem;
+  border-radius: 0.6rem;
+  border: 1px solid #cbd5e1;
+  transition: border 0.3s;
+}
+
+.section-form input:focus {
+  outline: none;
+  border-color: #646cff;
+}
+
+.section-form button {
+  padding: 1rem 2rem;
+  font-size: 1.6rem;
+  border: none;
+  border-radius: 0.8rem;
+  background-color: #646cff;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.section-form button:hover {
+  background-color: #535bf2;
+  transform: translateY(-2px);
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .container-edit {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .section-form {
+    padding: 2rem 1.5rem;
+  }
+}
+
+
+/* =========================
+  ADMIN - SERVICES JSX 
+   ========================= */
+
+
+   .admin-services-section {
+  padding: 4rem 2rem;
+  background-color: #f9f9f9;
+}
+
+.admin-services-section h1 {
+  text-align: center;
+  font-size: 2.8rem;
+  margin-bottom: 2rem;
+  color: #1f2937;
+}
+
+/* Add Service Form */
+.admin-services-section form {
+  display: grid;
+  gap: 1.6rem;
+  max-width: 70rem;
+  margin: 0 auto 4rem auto;
+  padding: 2rem;
+  background: white;
+  border-radius: 1rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.admin-services-section form input {
+  padding: 1rem 1.2rem;
+  font-size: 1.6rem;
+  border-radius: 0.6rem;
+  border: 1px solid #cbd5e1;
+}
+
+.admin-services-section form input:focus {
+  outline: none;
+  border-color: #646cff;
+}
+
+.admin-services-section form button {
+  padding: 1rem 2rem;
+  font-size: 1.6rem;
+  border: none;
+  border-radius: 0.8rem;
+  background-color: #646cff;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.admin-services-section form button:hover {
+  background-color: #535bf2;
+  transform: translateY(-2px);
+}
+
+/* Services List */
+.services-list {
+  display: grid;
+  gap: 2rem;
+  max-width: 120rem;
+  margin: 0 auto;
+  grid-template-columns: repeat(auto-fit, minmax(28rem, 1fr));
+}
+
+.service-card {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.service-card img {
+  border-radius: 0.8rem;
+  margin-bottom: 1rem;
+}
+
+.service-card a {
+  color: #646cff;
+  word-break: break-all;
+}
+
+.service-card button {
+  margin-top: 1rem;
+  padding: 0.8rem 2rem;
+  font-size: 1.4rem;
+  border: none;
+  border-radius: 0.8rem;
+  background-color: #ff4d4f;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.service-card button:hover {
+  background-color: #d9363e;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .admin-services-section form {
+    padding: 1.5rem;
+  }
+}
+
+
+
+/* =========================
+  ADMIN - CONTACT JSX 
+   ========================= */
+/* AdminContacts.css */
+
+.admin-contacts-section {
+  padding: 3rem 0;
+  background-color: #f9f9f9;
+}
+
+.admin-contacts-section h1 {
+  text-align: center;
+  font-size: 2.4rem;
+  margin-bottom: 2rem;
+  color: #242424;
+}
+
+.admin-contacts-section .container {
+  display: grid;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  grid-template-columns: repeat(4, 1fr); /* 4 cards per row */
+}
+
+/* Responsive: medium screens */
+@media (max-width: 1024px) {
+  .admin-contacts-section .container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Responsive: mobile screens */
+@media (max-width: 768px) {
+  .admin-contacts-section .container {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Individual card styling */
+.admin-contacts-section .container > div {
+  background-color: #ffffff;
+  padding: 1.6rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.admin-contacts-section .container > div:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+}
+
+.admin-contacts-section p {
+  font-size: 1.6rem;
+  margin-bottom: 0.8rem;
+  color: #333;
+}
+
+.admin-contacts-section .btn {
+  display: inline-block;
+  padding: 0.8rem 1.6rem;
+  background-color: #646cff;
+  color: #fff;
+  border: none;
+  border-radius: 0.6rem;
+  cursor: pointer;
+  font-size: 1.4rem;
+  transition: background-color 0.3s ease;
+}
+
+.admin-contacts-section .btn:hover {
+  background-color: #5056d4;
+}

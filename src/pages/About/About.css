@@ -1,0 +1,223 @@
+/* About.css */
+
+/* Hero Section */
+.about-hero-section {
+  padding: 6rem 2rem;
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url("/images/go1.jpeg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.about-hero-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.about-hero-content p {
+  font-size: 1.6rem;
+  color: #111;
+  line-height: 1.6;
+}
+
+.about-hero-content h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  line-height: 1.2;
+  color: #111;
+  margin: 1rem 0;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.1);
+}
+
+/* Buttons */
+.about-btn-group {
+  display: flex;
+  gap: 1.2rem;
+  margin-top: 2rem;
+}
+
+.about-btn {
+  padding: 1rem 2.2rem;
+  font-size: 1.6rem;
+  font-weight: 500;
+  color: #fff;
+  background-color: #3b82f6; /* primary color */
+  border: none;
+  border-radius: 0.8rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  text-align: center;
+  display: inline-block;
+}
+
+.about-btn:hover {
+  background-color: #535bf2;
+  transform: translateY(-2px);
+}
+
+/* Hero Image */
+.about-hero-image img {
+  width: 50%;
+  max-width: 400px;
+  border-radius: 10px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+  height: 300px;
+  margin-left: 80px;
+  margin-top: 11rem;
+}
+
+.about-hero-image img:hover {
+  transform: scale(1.03);
+}
+
+/* Mission & Vision Section */
+.about-mission-vision {
+  padding: 4rem 2rem;
+  background-color: #f8f9fa;
+}
+
+.about-mission-vision h2 {
+  font-size: 2.4rem;
+  margin-bottom: 1rem;
+}
+
+.about-mission-vision p {
+  font-size: 1.6rem;
+  color: #555;
+  margin-bottom: 1.5rem;
+}
+
+/* Skills Section */
+.about-skills {
+  padding: 4rem 2rem;
+}
+
+.about-skills h2 {
+  font-size: 2.4rem;
+  margin-bottom: 2rem;
+}
+
+.about-skills-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.about-skill-card {
+  flex: 1 1 150px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 1rem;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+.about-skill-card img {
+  margin-bottom: 0.8rem;
+}
+
+/* Languages Section */
+.about-languages {
+  padding: 4rem 2rem;
+  background-color: #f8f9fa;
+}
+
+.about-languages h2 {
+  font-size: 2.4rem;
+  margin-bottom: 2rem;
+}
+
+.about-languages-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.about-language-card {
+  flex: 1 1 120px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 1rem;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+.about-language-card img {
+  margin-bottom: 0.8rem;
+}
+
+/* Experience Section */
+.about-experience {
+  padding: 4rem 2rem;
+}
+
+.about-experience h2 {
+  font-size: 2.4rem;
+  margin-bottom: 1rem;
+}
+
+.about-experience p {
+  font-size: 1.6rem;
+  color: black;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .about-container.grid-two-cols {
+    grid-template-columns: 1fr;
+    gap: 4rem;
+  }
+
+  .about-hero-image img {
+    max-width: 300px;
+  }
+
+  .about-hero-content h1 {
+    font-size: 2.4rem;
+  }
+
+  .about-hero-content p {
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .about-hero-section {
+    padding: 4rem 1rem;
+  }
+
+  .about-btn {
+    font-size: 1.4rem;
+    padding: 0.8rem 1.8rem;
+  }
+
+  .secondary-btn {
+    font-size: 1.4rem;
+  }
+
+  /* Skills & Languages: 2 cards per row on small screens */
+  .about-skills-container .about-skill-card,
+  .about-languages-container .about-language-card {
+    flex: 1 1 calc(50% - 0.75rem);
+    max-width: calc(50% - 0.75rem);
+  }
+
+  .about-skills-container,
+  .about-languages-container {
+    justify-content: flex-start;
+    gap: 1.5rem;
+  }
+}

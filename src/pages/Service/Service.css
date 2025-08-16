@@ -1,0 +1,143 @@
+/* Services Section */
+.section-services {
+  padding: 6rem 2rem;
+  background: #f3f4f6;
+}
+
+.container-service {
+  max-width: 1200px;
+  margin: 0 auto 4rem;
+  text-align: center;
+}
+
+.main-heading {
+  font-size: 3rem;
+  color: #1f2937;
+  margin-bottom: 1rem;
+}
+
+.section-description {
+  font-size: 1.8rem;
+  color: #4b5563;
+}
+
+/* Service Grid */
+.grid-service {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2.5rem;
+  perspective: 1000px; /* Needed for tilt effect */
+}
+
+/* Service Card */
+.card-service {
+  background: white;
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transform-style: preserve-3d; /* Needed for tilt */
+}
+
+.card-service:hover {
+  transform: rotateY(10deg) rotateX(5deg) translateY(-5px);
+  box-shadow: 0 15px 35px rgba(100, 108, 255, 0.3); /* glow effect */
+}
+
+.card-img-service img {
+  width: 100%;
+  display: block;
+  border-bottom: 1px solid #e5e7eb;
+  transition: transform 0.3s ease;
+}
+
+.card-img-service img:hover {
+  transform: scale(1.05);
+}
+
+.card-details-service {
+  padding: 1.5rem;
+  text-align: center;
+}
+
+.project-title {
+  font-size: 2rem;
+  color: #1f2937;
+  margin-bottom: 1rem;
+}
+
+.card-details-service p {
+  font-size: 1.6rem;
+  color: #4b5563;
+  margin-bottom: 1.5rem;
+}
+
+/* Buttons */
+.btn-service {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.cd-btn-service {
+  background: linear-gradient(135deg, #646cff, #535bf2);
+  color: white;
+  padding: 0.8rem 1.6rem;
+  border-radius: 0.8rem;
+  text-decoration: none;
+  font-size: 1.5rem;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.cd-btn-service:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(100,108,255,0.4);
+}
+
+.secondary-btn-service {
+  background: #f3f4f6;
+  color: #646cff;
+  border: 2px solid #646cff;
+}
+
+.secondary-btn-service:hover {
+  background: #646cff;
+  color: white;
+  box-shadow: 0 5px 15px rgba(100,108,255,0.4);
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .grid-service {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+}
+
+@media (max-width: 600px) {
+  .main-heading {
+    font-size: 2.2rem;
+  }
+
+  .section-description {
+    font-size: 1.5rem;
+  }
+
+  .project-title {
+    font-size: 1.6rem;
+  }
+
+  .card-details-service p {
+    font-size: 1.4rem;
+  }
+
+  .cd-btn-service, .secondary-btn-service {
+    font-size: 1.4rem;
+    padding: 0.6rem 1.2rem;
+  }
+
+  .card-service:hover {
+    transform: none; /* remove tilt on small screens */
+    box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+  }
+}

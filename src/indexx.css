@@ -1,0 +1,872 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Urbanist, system-ui, Avenir, Arial, Helvetica, Arial, sans-serif;
+}
+
+:root {
+  --bg-color: #f4f3ff;
+  --btn-color: #646cff;
+  --dark-color: #242424;
+  --helper-color: #99b9ff;
+}
+html {
+  font-size: 62.5%;
+}
+/* 
+ .image-container {
+   background: url('/images/bg.jpg') no-repeat center/cover; 
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: black; 
+  text-align: center;
+  padding: 1rem;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.4); 
+ 
+}  */
+a {
+  text-decoration: none;
+}
+
+/* base style */
+
+body {
+  padding-top: 80px;
+  margin: 0;
+  background-image: url('/images/go1.jpeg'); 
+  background-size: cover; /* poori screen cover kare */
+  background-repeat: no-repeat; /* repeat na ho */
+  /* background-attachment: fixed; */
+  background-position: center; /* center me rahe */
+  min-height: 200vh;
+}
+
+h1 {
+  font-size: 5.4rem;
+  line-height: 1.1;
+  font-weight: bold;
+}
+
+p,
+li,
+label,
+input,
+textarea {
+  font-size: 1.8rem;
+  line-height: 1.56;
+  letter-spacing: 0.06rem;
+  word-spacing: 0.06rem;
+}
+
+a {
+  font-weight: 500;
+  font-size: 1.8rem;
+  color: var(--btn-color);
+  text-decoration: inherit;
+}
+
+li {
+  list-style: none;
+}
+
+
+
+.app-layout {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* pura screen height cover kare */
+}
+
+.content {
+  flex: 1; /* footer ke liye space bacha ke rakhe */
+}
+
+
+/* layout rule */
+.div1 {
+  background: rgba(196, 177, 177, 0.1);
+  border-radius: 1rem; /* thoda rounded corner */
+  padding: 1.6rem; /* andar ka space */
+  margin: 0.8rem; /* bahar ka gap har card ke around */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* halka shadow */
+}
+
+.container {
+  max-width: 140rem;
+  padding: 0rem 2.4rem;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  /* border: 2px solid red; */
+}
+
+.grid {
+  display: grid;
+  gap: 6.4rem;
+
+  /* gap:20rem; */
+}
+.grid-two-cols {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.grid-four-cols {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+/* THIS IS SERVICE SECTION */
+
+/* module Rules / reusable */
+button {
+  text-transform: capitalize;
+  padding: 1rem 2.2rem;
+  font-size: 1.7rem;
+  background-color: var(--btn-color);
+  border-radius: 0.8rem;
+  /* -webkit-border-radius: 0.8rem;
+-moz-border-radius: 0.8rem;
+-ms-border-radius: 0.8rem;
+-o-border-radius: 0.8rem; */
+
+  border: 0.1rem solid transparent;
+  cursor: pointer;
+  letter-spacing: 0.1rem;
+  transition: border-color 0.3s;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 1.1);
+
+  /* -webkit-transition: border-color 0.3s;
+-moz-transition: border-color 0.3s;
+-ms-transition: border-color 0.3rem;
+-o-transition: border-color 0.3s; */
+}
+
+.secondary-btn {
+  background-color: transparent;
+  background: rgba(7, 21, 175, 0.2);
+  box-shadow: inset 0 0 0 0.2rem var(--btn-color);
+  margin-left: 3.2rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 1.1);
+  /* border: 1px solid gray; */
+}
+/* 
+state rule */
+
+button:hover {
+  box-shadow: inset 0 0 0 0.2rem var(--bg-color);
+}
+
+a:hover a.active {
+  color: #535bf2;
+}
+
+/* Hero Section  */
+
+.section-hero {
+  .grid {
+    align-items: center;
+  }
+
+  .hero-content {
+    margin-top: 5rem;
+    p {
+      margin-top: 20px;
+      margin: 3.4rem 0 4.8rem 0;
+
+      &:first-child {
+        margin: 0 0 1.2rem 0;
+      }
+    }
+    h1 {
+      margin-top: 40px;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 2.3); /* x-offset, y-offset, blur, color */
+    }
+  }
+
+  .hero-image {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+}
+
+/* End Hero */
+
+/*********** analytics Section **********/
+.section-analytics {
+  margin: 9.6rem 0;
+
+  .container {
+    background-color: gray;
+    border-radius: 1rem;
+  }
+
+  .grid {
+    color: white;
+  }
+
+  .div1 {
+    text-align: center;
+    border-right: 0.2rem solid var(--bg-color);
+    width: 100%;
+
+    &:last-child {
+      border-right: none;
+    }
+  }
+
+  h2 {
+    font-size: 4.8rem;
+  }
+
+  p {
+    text-transform: capitalize;
+  }
+}
+
+.section-analytics h2 {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 1.3); /* x-offset, y-offset, blur, color */
+}
+
+.section-contact {
+  width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 2rem;
+  overflow-x: hidden;
+}
+
+.section-contact .contact-content {
+  padding: 0;
+  text-align: center;
+}
+
+.section-contact .contact-content h1 {
+  margin-bottom: 2rem;
+}
+
+.section-contact .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+  padding-top: 2rem;
+  flex-wrap: wrap; /* responsive layout */
+}
+
+.section-content .contact-image {
+  flex: 1;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.section-content .contact-image img {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  object-fit: cover;
+}
+
+.section-form {
+  flex: 1;
+  max-width: 400px;
+  width: 100%;
+}
+
+.section-form form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+  width: 100%;
+}
+
+.section-form label {
+  display: block;
+  margin-bottom: 0.6rem;
+  text-transform: capitalize;
+}
+
+.section-form input,
+.section-form textarea {
+  width: 100%;
+  padding: 0.6rem 0.8rem;
+  font-size: 1rem;
+}
+
+/* 
+error page */
+
+#error-page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#error-page .content {
+  max-width: 70rem;
+  text-align: center;
+}
+
+.content h2.header {
+  font-size: 18vw;
+  line-height: 1em;
+  animation: animate 10s ease-in-out infinite;
+  background: -webkit-repeating-linear-gradient(
+    -60deg,
+    #71b7e6,
+    var(--btn-color),
+    #b98acc,
+    #ee8176,
+    #b98acc,
+    var(--btn-color),
+    #9b59b6
+  );
+  background-size: 500%;
+  /* -webkit-background-clip: text; */
+  -webkit-text-fill-color: transparent;
+  text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.25);
+  position: relative;
+}
+
+@keyframes animate {
+  0% {
+    background-position: 0 0;
+  }
+  25% {
+    background-position: 100% 0;
+  }
+  50% {
+    background-position: 100% 100%;
+  }
+  75% {
+    background-position: 0 100%;
+  }
+}
+
+.content h4 {
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  font-size: 2rem;
+}
+
+.content .btns {
+  margin: 25px 0;
+  display: inline-flex;
+  justify-content: center;
+}
+
+.content .btns a {
+  display: inline-block;
+  margin: 0 1-px;
+  text-decoration: none;
+  border: 2px solid var(--btn-color);
+  color: var(--btn-color);
+  font-weight: 500;
+  padding: 10px 25px;
+  border-radius: 25px;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+}
+
+.content .btns a:hover {
+  background: var(--btn-color);
+  color: #fff;
+}
+
+/* Registration section ------------------------- */
+
+.section-registration {
+  padding: 0 3.2rem;
+
+  .container {
+    padding-top: 3.2rem;
+    align-items: center;
+  }
+
+  .reg-img img {
+    width: 75%;
+    height: auto;
+  }
+}
+
+.section-registration .registration-form {
+  label {
+    display: block;
+    margin: 2.4rem 0 0.8rem 0;
+    text-transform: capitalize;
+  }
+  input {
+    width: 90%;
+    padding: 0.6rem 0.6rem;
+  }
+  button {
+    margin-top: 3.2rem;
+  }
+}
+
+.hero-section {
+  h1 {
+    margin-bottom: 1.5rem;
+  }
+  .btn {
+    margin-top: 1.5rem;
+  }
+  p {
+    margin-bottom: 0.5rem;
+  }
+}
+
+/* Footer always bottom */
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+}
+
+.app-layout {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.content {
+  flex: 1;
+}
+
+
+/* ADMIN PANALE */
+
+/* Admin Users – raw table look */
+.admin-users-section {
+  padding: 24px 0;
+}
+
+.container-admin {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+.container-admin h1 {
+  font-size: 24px;
+  margin-bottom: 16px;
+  font-weight: 600;
+}
+
+/* wrapper to enable horizontal scroll on small screens */
+.container-admin.admin-users {
+  overflow-x: auto;
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.04);
+}
+
+/* raw table style */
+.admin-users table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 700px; /* so columns don’t squeeze too much */
+}
+
+.admin-users th,
+.admin-users td {
+  border: 1px solid #e5e7eb;
+  padding: 10px 12px;
+  text-align: left;
+  font-size: 14px;
+  white-space: nowrap;
+}
+
+/* sticky header */
+.admin-users thead th {
+  position: sticky;
+  top: 0;
+  background: #f9fafb;
+  z-index: 1;
+  font-weight: 600;
+}
+
+/* zebra rows + hover */
+.admin-users tbody tr:nth-child(odd) {
+  background: #fcfcfd;
+}
+.admin-users tbody tr:hover {
+  background: #f3f4f6;
+}
+
+/* action cells look clickable even if text hai */
+.admin-users td:nth-child(4),
+.admin-users td:nth-child(5) {
+  font-weight: 500;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+/* responsive text wrap for long emails/names (optional) */
+@media (max-width: 640px) {
+  .admin-users th,
+  .admin-users td {
+    white-space: normal;
+  }
+}
+
+
+
+/* Common button style */
+.btn-action {
+  padding: 6px 14px;
+  border: none;
+  border-radius: 4px;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  color: #fff;
+  transition: background-color 0.2s ease;
+}
+
+/* Edit button - blue */
+.btn-edit {
+  background-color: #3b82f6; /* blue-500 */
+}
+.btn-edit:hover {
+  background-color: #2563eb; /* blue-600 */
+}
+
+/* Delete button - red */
+.btn-delete {
+  background-color: #ef4444; /* red-500 */
+}
+.btn-delete:hover {
+  background-color: #dc2626; /* red-600 */
+}
+
+
+
+/* THIS IS UPDATE JSX CODE  */
+
+
+
+/* hello braother  */
+
+.update-user-section {
+  padding-top: 40px; /* form ko top ke closer karega */
+  min-height: 80vh; /* thoda balanced height */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.update-user-section .section-form {
+  background: #fff;
+  padding: 20px 30px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  max-width: 500px;
+  width: 100%;
+}
+
+.update-user-section label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.update-user-section input {
+  width: 100%;
+  padding: 8px 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.update-user-section button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.update-user-section button:hover {
+  background-color: #0056b3;
+}
+
+
+/* UPDATE CONTACT CSS */
+/* Admin Contacts Section */
+.admin-contacts-section {
+  padding: 2rem 0;
+}
+
+.admin-contacts-section h1 {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #333;
+}
+
+/* Container already exists, so we just make it a grid */
+.container.admin-users {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+/* Each Contact Card */
+.container.admin-users > div {
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 1rem;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: transform 0.2s ease;
+}
+
+.container.admin-users > div:hover {
+  transform: translateY(-3px);
+}
+
+/* Contact Info Text */
+.container.admin-users p {
+  margin: 0.3rem 0;
+  font-size: 0.95rem;
+  color: #555;
+}
+
+/* Delete Button */
+.container.admin-users .btn {
+  background-color: #ff4d4f;
+  color: white;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
+  transition: background-color 0.2s ease;
+}
+
+.container.admin-users .btn:hover {
+  background-color: #d9363e;
+}
+
+
+
+/* THIS IS FOR SERVICE ADMIN CARD  */
+
+/* Admin Services Page */
+.admin-services-section {
+  padding: 2rem;
+  background-color: #f9fafb;
+  min-height: 80vh;
+}
+
+/* Heading */
+.admin-services-section h1 {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+  color: #333;
+}
+
+/* Form styling */
+.admin-services-section form {
+  display: grid;
+  gap: 1rem;
+  background: #ffffff;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0,0,0,0.08);
+  max-width: 500px;
+  margin: 0 auto 2rem;
+}
+
+.admin-services-section form input {
+  padding: 0.6rem;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 0.9rem;
+}
+
+.admin-services-section form button {
+  padding: 0.6rem;
+  border: none;
+  border-radius: 6px;
+  background-color: #2563eb;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.admin-services-section form button:hover {
+  background-color: #1d4ed8;
+}
+
+/* Service list container */
+.services-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+/* Service card */
+.service-card {
+  background: white;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0,0,0,0.08);
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  transition: transform 0.2s;
+}
+
+.service-card:hover {
+  transform: translateY(-3px);
+}
+
+.service-card img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.service-card p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #444;
+}
+
+.service-card a {
+  color: #2563eb;
+  text-decoration: none;
+}
+
+.service-card a:hover {
+  text-decoration: underline;
+}
+
+/* Delete button */
+.service-card button {
+  padding: 0.5rem;
+  border: none;
+  border-radius: 6px;
+  background-color: #dc2626;
+  color: white;
+  font-size: 0.9rem;
+  cursor: pointer;
+  margin-top: auto;
+}
+
+.service-card button:hover {
+  background-color: #b91c1c;
+}
+
+
+
+/* MAIN SERVICE JSX  */
+
+
+
+/* Main Services Section */
+.section-services {
+  padding: 3rem 1rem;
+  background-color: #f3f4f6;
+}
+
+/* Container for heading */
+.container-service {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.main-heading {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #111827;
+  margin-bottom: 0.5rem;
+}
+
+.section-description {
+  font-size: 1rem;
+  color: #4b5563;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Grid for cards */
+.grid-service {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.8rem;
+}
+
+/* Individual card */
+.card-service {
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0px 6px 15px rgba(0,0,0,0.08);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s ease-in-out;
+}
+
+.card-service:hover {
+  transform: translateY(-5px);
+}
+
+.card-img-service img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+/* Card details */
+.card-details-service {
+  padding: 1rem;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card-details-service p {
+  color: #374151;
+  font-size: 0.95rem;
+  margin-bottom: 1rem;
+}
+
+/* Buttons */
+.btn-service {
+  display: flex;
+  gap: 0.8rem;
+}
+
+.cd-btn-service {
+  text-decoration: none;
+  background-color: #3b82f6;
+  color: white;
+  padding: 0.5rem 0.9rem;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  transition: background-color 0.2s;
+}
+
+.cd-btn-service:hover {
+  background-color: #1e40af;
+}
