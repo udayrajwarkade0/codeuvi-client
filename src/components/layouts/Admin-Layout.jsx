@@ -44,7 +44,7 @@ export const AdminLayout = () => {
               </li>
               <li>
                 <NavLink to="/admin/services">
-                  <FaRegListAlt /> Services
+                  <FaRegListAlt /> Projects
                 </NavLink>
               </li>
               <li>
@@ -60,3 +60,4 @@ export const AdminLayout = () => {
     </>
   );
 };
+
