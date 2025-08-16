@@ -8,7 +8,7 @@ export const AdminContacts = () => {
 
   const getContactsData = useCallback(async () => {
     try {
-      const response = await fetch("http://localhost:5000/api/admin/contacts", {
+      const response = await fetch("http://codeuvi-server.onrender.com/api/admin/contacts", {
         method: "GET",
         headers: {
           Authorization: AuthorizationToken,
@@ -28,7 +28,7 @@ export const AdminContacts = () => {
   const deleteContactById = async (id) => {
     try {
       const response = await fetch(
-        `http://localhost:5000/api/admin/contacts/delete/${id}`,
+        `http://codeuvi-server.onrender.com/api/admin/contacts/delete/${id}`,
         {
           method: "DELETE",
           headers: {
@@ -69,3 +69,4 @@ export const AdminContacts = () => {
     </section>
   );
 };
+
