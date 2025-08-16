@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useAuth } from "../../store/auth-context";
+import { toast } from "react-toastify";
 import "./Contact.css";
 
 export const Contact = () => {
@@ -34,7 +35,7 @@ export const Contact = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch(`http://localhost:5000/api/form/contact`, {
+      const response = await fetch(`http://codeuvi-server.onrender.com/api/form/contact`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(contact),
@@ -42,11 +43,11 @@ export const Contact = () => {
       const data = await response.json();
 
       if (response.ok) {
-        alert("Contact successful!");
+        toast.success("Contact successful!");
         setContact({ username: "", email: "", message: "" });
         navigate("/");
       } else {
-        alert(data.message || "Contact failed");
+        toast.error(data.message || "Contact failed");
       }
     } catch (error) {
       console.log("Contact error", error);
@@ -145,3 +146,4 @@ export const Contact = () => {
     </>
   );
 };
+
