@@ -40,7 +40,7 @@ export const Navbar = () => {
         <ul onClick={() => setMenuOpen(false)}>
           <li><NavLink to="/" end>Home</NavLink></li>
           <li><NavLink to="/about">About</NavLink></li>
-          <li><NavLink to="/service">Services</NavLink></li>
+          <li><NavLink to="/service">Projects</NavLink></li>
           <li><NavLink to="/contact">Contact</NavLink></li>
 
           {isLoggedIn ? (
@@ -59,3 +59,4 @@ export const Navbar = () => {
     </header>
   );
 };
+
