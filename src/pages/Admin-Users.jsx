@@ -9,7 +9,7 @@ export const AdminUsers = () => {
 
   const getAllUsersData = useCallback(async () => {
     try {
-      const response = await fetch("http://codeuvi-server.onrender.com/api/admin/users", {
+      const response = await fetch("https://codeuvi-server.onrender.com/api/admin/users", {
         method: "GET",
         headers: {
           Authorization: AuthorizationToken,
@@ -28,7 +28,7 @@ export const AdminUsers = () => {
   const deleteUser = async (id) => {
     try {
       const response = await fetch(
-        `http://codeuvi-server.onrender.com/api/admin/users/delete/${id}`,
+        `https://codeuvi-server.onrender.com/api/admin/users/delete/${id}`,
         {
           method: "DELETE",
           headers: {
@@ -96,4 +96,5 @@ export const AdminUsers = () => {
     </>
   );
 };
+
 
