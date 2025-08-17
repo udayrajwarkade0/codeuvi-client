@@ -14,7 +14,7 @@ export const AdminServices = () => {
   // Fetch services
   const getServicesData = async () => {
     try {
-      const res = await fetch("http://codeuvi-server.onrender.com/api/admin/services", {
+      const res = await fetch("https://codeuvi-server.onrender.com/api/admin/services", {
         headers: { Authorization: AuthorizationToken }
       });
       const data = await res.json();
@@ -28,7 +28,7 @@ export const AdminServices = () => {
   const handleAddService = async (e) => {
     e.preventDefault();
     try {
-      const res = await fetch("http://codeuvi-server.onrender.com/api/admin/services", {
+      const res = await fetch("https://codeuvi-server.onrender.com/api/admin/services", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -48,7 +48,7 @@ export const AdminServices = () => {
   // Delete service
   const deleteService = async (id) => {
     try {
-      const res = await fetch(`http://codeuvi-server.onrender.com/api/admin/services/delete/${id}`, {
+      const res = await fetch(`https://codeuvi-server.onrender.com/api/admin/services/delete/${id}`, {
         method: "DELETE",
         headers: { Authorization: AuthorizationToken }
       });
@@ -117,4 +117,5 @@ export const AdminServices = () => {
     </section>
   );
 };
+
 
