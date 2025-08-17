@@ -17,7 +17,7 @@ export const AdminUpdate = () => {
   const getSingleUserData = useCallback(async () => {
     try {
       const response = await fetch(
-        `http://codeuvi-server.onrender.com/api/admin/users/${id}`,
+        `https://codeuvi-server.onrender.com/api/admin/users/${id}`,
         {
           method: "GET",
           headers: {
@@ -48,7 +48,7 @@ export const AdminUpdate = () => {
     e.preventDefault();
     try {
       const response = await fetch(
-        `http://codeuvi-server.onrender.com/api/admin/users/update/${id}`,
+        `https://codeuvi-server.onrender.com/api/admin/users/update/${id}`,
         {
           method: "PATCH",
           headers: {
@@ -123,4 +123,5 @@ export const AdminUpdate = () => {
     </section>
   );
 };
+
 
