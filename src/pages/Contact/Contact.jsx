@@ -35,7 +35,7 @@ export const Contact = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch(`http://codeuvi-server.onrender.com/api/form/contact`, {
+      const response = await fetch(`https://codeuvi-server.onrender.com/api/form/contact`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(contact),
@@ -146,4 +146,5 @@ export const Contact = () => {
     </>
   );
 };
+
 
