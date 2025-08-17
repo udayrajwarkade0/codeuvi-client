@@ -27,7 +27,7 @@ export const AuthProvider = ({ children }) => {
     const userAuthentication = async () => {
       try {
         setLoding(true);
-        const response = await fetch("http://codeuvi-server.onrender.com/api/auth/user", {
+        const response = await fetch("https://codeuvi-server.onrender.com/api/auth/user", {
           method: "GET",
           headers: { Authorization: AuthorizationToken },
         });
@@ -54,7 +54,7 @@ export const AuthProvider = ({ children }) => {
 
   const getServices = async () => {
     try {
-      const response = await fetch("http://codeuvi-server.onrender.com/api/data/service", {
+      const response = await fetch("https://codeuvi-server.onrender.com/api/data/service", {
         method: "GET",
       });
 
@@ -91,4 +91,5 @@ export const AuthProvider = ({ children }) => {
     </AuthContext.Provider>
   );
 };
+
 
